@@ -1,0 +1,48 @@
+import React, { useState } from "react";
+import menu from "../Icons/menu.png";
+import CloseMenu from "../Icons/close.png";
+import "./Header.css";
+
+export default function NarBar() {
+  const [isActive, setIsActive] = useState(true);
+
+  const MenuToggle = () => {
+    setIsActive(!isActive);
+  };
+
+  return (
+    <header className="flex justify-between px-10 py-6 w-screen fixed z-20 bg-linear top-0 md:flex-row md:items-center lg:px-12 text-white md:h-24 md:px-8 md:border-b-2 md:border-white ">
+      <a href="html" className="mr-auto text-2xl">
+        {" "}
+        get<span className="text-light-purple">linked</span>
+      </a>
+      {}
+      <nav className="NavBar-List md:flex flex-col fixed items-start pl-8 md:pl-0 md:items-center md:sticky top-0 left-0 opacity-1 md:0 mx-auto md:flex-row w-[80%] md:h-0 md:px-40 bg-lemon h-screen md:opacity-100 ">
+        <ul className="flex flex-col leading-[3] text-xl font-semibold md:items-center md:flex-row md:ml-auto">
+          <li className=" pt-24 md:pt-0 md:px-5 lg:px-8 md:text-lg hover:text-purple transition-colors ease-in-out">
+            <a href="#timeline"> Timeline</a>
+          </li>
+          <li className="md:px-5 lg:px-8 md:text-lg hover:text-purple transition-colors ease-in-out">
+            {" "}
+            <a href="#overview">Overview </a>
+          </li>
+          <li className="md:px-5 lg:px-8 md:text-lg hover:text-purple transition-colors ease-in-out">
+            {" "}
+            <a href="#faq">FAQs </a>
+          </li>
+          <li className="md:px-5 lg:px-8 md:text-lg hover:text-purple transition-colors ease-in-out">
+            {" "}
+            <a href="#contact">Contact </a>
+          </li>
+        </ul>
+        <button className=" px-8 py-2 rounded-md text-center font-bold bg-gradient-to-r from-light-purple to-linear md:ml-20 hover:bg-gradient-to-r hover:from-linear to hover:to-black hover:border hover:border-white">
+          Register
+        </button>
+      </nav>
+      <div className="menuIcons md:hidden flex items-center justify-center">
+        <img onClick={MenuToggle} className="menu w-6 " src={menu} alt="" />
+        <img className="closeMenu w-6" src={CloseMenu} alt="" />
+      </div>
+    </header>
+  );
+}
