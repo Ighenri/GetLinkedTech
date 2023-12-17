@@ -9,19 +9,4 @@
     visibility: visible;
     display: flex;
   }
-  .menu {
-    opacity: 1;
-  }
-
-  .closeMenu {
-    opacity: 0;
-  }
-
-  .menu.active {
-    opacity: 0;
-  }
-
-  .closeMenu.active {
-    opacity: 1;
-  }
 }
