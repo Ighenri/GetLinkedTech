@@ -1,8 +1,10 @@
 import Header from "./Components/Header";
+import HeroPage from "./Components/HeroPage";
 function App() {
   return (
-    <div className="App bg-dark-purple">
+    <div className="App">
       <Header />
+      <HeroPage />
     </div>
   );
 }

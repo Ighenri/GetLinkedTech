@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import menu from "../Icons/menu.png";
 import CloseMenu from "../Icons/close.png";
 import "./Header.css";
+import Button from "./ReUse/Button";
 
 export default function NarBar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -11,8 +12,8 @@ export default function NarBar() {
   };
 
   return (
-    <header className="flex justify-between px-10 py-6 w-screen fixed z-20 bg-linear top-0 md:flex-row md:items-center lg:px-12 text-white md:h-24 md:px-8 md:border-b-2 md:border-white ">
-      <a href="html" className="mr-auto text-2xl">
+    <header className="flex justify-between px-10 py-6 w-screen fixed z-20 top-0 md:flex-row md:items-center lg:px-12 text-white md:h-24 md:px-8 md:border-b-2 md:border-white ">
+      <a href="html" className="mr-auto text-2xl md:text-4xl">
         {" "}
         get<span className="text-light-purple">linked</span>
       </a>
@@ -20,7 +21,7 @@ export default function NarBar() {
       <nav
         className={`NavBar-List ${
           isOpen ? "active" : ""
-        } md:flex flex-col fixed items-start pl-8 md:pl-0 md:items-center md:sticky top-0 left-0 opacity-1 md:0 mx-auto md:flex-row w-[80%] md:h-0 md:px-40 bg-lemon h-screen md:opacity-100`}
+        } md:flex flex-col fixed items-start pl-8 md:pl-0 md:items-center md:sticky top-0 left-0 opacity-1 md:0 mx-auto md:flex-row w-[80%] md:w-full md:h-0 md:px-40  h-screen md:opacity-100`}
       >
         <ul className="flex flex-col leading-[3] text-xl font-semibold md:items-center md:flex-row md:ml-auto">
           <li className=" pt-24 md:pt-0 md:px-5 lg:px-8 md:text-lg hover:text-purple transition-colors ease-in-out">
@@ -39,9 +40,7 @@ export default function NarBar() {
             <a href="#contact">Contact </a>
           </li>
         </ul>
-        <button className=" px-8 py-2 rounded-md text-center font-bold bg-gradient-to-r from-light-purple to-linear md:ml-20 hover:bg-gradient-to-r hover:from-linear to hover:to-black hover:border hover:border-white">
-          Register
-        </button>
+        <Button />
       </nav>
 
       <div className="md:invisible flex items-center justify-center">
