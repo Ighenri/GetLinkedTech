@@ -10,12 +10,12 @@ import smartglass from "../Imgs/man-wearing-smart-glasses.png";
 export default function HeroPage() {
   return (
     <section className="text-white px-20 h-screen translate-y-32 md:translate-y-1/4 ">
-      <div className="flex justify-end">
+      <div className="flex justify-end md:text-2xl">
         <p>Igniting a Revolution in HR Innovation</p>
       </div>
 
       <div className="Hero grid grid-cols-1 text-center md:text-left md:flex ">
-        <div className="countdownSection w-full md:w-1/2">
+        <div className="countdownSection flex flex-col items-center md:block w-full md:w-1/2">
           <p className="block text-4xl md:text-6xl font-extrabold">
             getlinked Tech Hackathon{" "}
             <span className="text-light-purple">1.0</span>
@@ -28,7 +28,7 @@ export default function HeroPage() {
           </p>
           <Button children="Register" styleList="changeThis" />
 
-          <div className="countdown grid grid-cols-3 w-fit md:w-1/2 bg-lemon text-center items-center">
+          <div className="countdown grid grid-cols-3 w-fit md:w-1/2 text-center items-center">
             <div>
               <span id="hour0" className="text-5xl">
                 0

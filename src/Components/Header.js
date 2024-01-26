@@ -21,7 +21,7 @@ export default function NarBar() {
       <nav
         className={`NavBar-List ${
           isOpen ? "active" : ""
-        } md:flex flex-col fixed items-start pl-8 md:pl-0 md:items-center md:sticky top-0 left-0 opacity-1 md:0 mx-auto md:flex-row w-[85%] md:w-full md:h-0 md:px-40  h-screen md:opacity-100`}
+        } md:flex flex-col fixed items-start pl-8 md:pl-0 md:items-center md:sticky top-0 left-0 opacity-1 md:0 mx-auto md:flex-row w-full md:h-0 md:px-40  h-screen md:opacity-100`}
       >
         <ul className="flex flex-col leading-[3] text-xl font-semibold md:items-center md:flex-row md:ml-auto">
           <li className=" pt-24 md:pt-0 md:px-5 lg:px-8 md:text-lg hover:text-purple transition-colors ease-in-out">
@@ -43,7 +43,7 @@ export default function NarBar() {
         <Button children="Register" />
       </nav>
 
-      <div className="md:invisible flex items-center justify-center">
+      <div className="md:invisible flex items-center justify-center z-20">
         <img
           onClick={MenuToggle}
           className="w-6"
