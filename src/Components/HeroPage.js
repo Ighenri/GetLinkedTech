@@ -16,7 +16,7 @@ export default function HeroPage() {
 
       <div className="Hero grid grid-cols-1 text-center md:text-left md:flex ">
         <div className="countdownSection w-full md:w-1/2">
-          <p className="text-4xl md:text-6xl font-extrabold">
+          <p className="block text-4xl md:text-6xl font-extrabold">
             getlinked Tech Hackathon{" "}
             <span className="text-light-purple">1.0</span>
             <img className="h-12 inline px-1" src={chain} alt="" />
