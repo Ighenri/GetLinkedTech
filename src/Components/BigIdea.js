@@ -1,12 +1,19 @@
 import React from 'react'
-import rules from "../Assets/Imgs/rules.png"
+import idea from "../Assets/Imgs/The big idea.png"
 
-function Rules() {
+function BigIdea() {
   return (
-    <section className="container flex flex-col md:flex-row justify-evenly items-center min-h-screen text-white mx-auto w-[90%] ">
+    <section className="container flex flex-col md:flex-row justify-evenly items-center mt-60 md:mt-0 lg:mt-0 min-h-screen text-white mx-auto w-[90%] ">
+      <div className="bigIdeal w-[80%] mx-auto md:w-1/2 md:mr-10">
+        <img className="w-full " src={idea} alt="bigidea" />
+      </div>
       <div className="writeup w-[80%]  mx-auto md:w-1/2">
-        <h4 className="text-white font-bold md:text-3xl">Rules and</h4>
-        <h5 className=" text-purple font-bold md:text-3xl mb-4">Guildines</h5>
+        <h4 className="text-white font-bold md:text-3xl">
+          Introduction to getlinked
+        </h4>
+        <h5 className=" text-purple font-bold md:text-3xl mb-4">
+          tech Hackatheon 1.0
+        </h5>
         <p>
           Our tech hackathon is a melting pot of visionaries, and its purpose is
           as clear as day: to shape the future. Whether you're a coding genius,
@@ -16,11 +23,8 @@ function Rules() {
           change the world, that's what we're all about!
         </p>
       </div>
-      <div className="Rules w-[80%] mx-auto md:w-1/2 md:mr-10">
-        <img className="w-full " src={rules} alt="rules" />
-      </div>
     </section>
   );
 }
 
-export default Rules
+export default BigIdea

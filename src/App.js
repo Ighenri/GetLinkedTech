@@ -1,3 +1,4 @@
+import BigIdea from "./Components/BigIdea";
 import Header from "./Components/Header";
 import HeroPage from "./Components/HeroPage";
 import Rules from "./Components/Rules"
@@ -6,6 +7,7 @@ function App() {
     <div className="App w-screen">
       <Header />
       <HeroPage />
+      <BigIdea/>
       <Rules/>
     </div>
   );

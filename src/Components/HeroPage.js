@@ -10,7 +10,7 @@ import smartglass from "../Assets/Imgs/man-wearing-smart-glasses.png";
 export default function HeroPage() {
   return (
     <section className="text-white px-5 md:px-20 h-screen translate-y-32 md:translate-y-1/4 ">
-      <div className="flex justify-end md:text-2xl ">
+      <div className="flex justify-end md:text-2xl mr-4">
         <p>Igniting a Revolution in HR Innovation</p>
       </div>
 
