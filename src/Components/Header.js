@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import menu from "../Icons/menu.png";
-import CloseMenu from "../Icons/close.png";
+import menu from "../Assets/Icons/menu.png";
+import CloseMenu from "../Assets/Icons/close.png";
 import "./Header.css";
 import Button from "./ReUse/Button";
 
@@ -12,8 +12,8 @@ export default function NarBar() {
   };
 
   return (
-    <header className="flex justify-between px-20 py-6 w-screen fixed z-20 top-0 right-0 left-0 md:flex-row md:items-center lg:px-12 text-white md:h-24 md:px-8 md:border-b-2 md:border-white ">
-      <a href="html" className="mr-auto text-2xl md:text-4xl">
+    <header className="flex justify-between px-10 py-6 w-screen fixed z-20 top-0 right-0 left-0 md:flex-row md:items-center lg:px-12 text-white md:h-24 md:px-8 md:border-b-2 md:border-white ">
+      <a href="html" className="mr-auto text-2xl md:text-3xl lg:text-4xl">
         {" "}
         get<span className="text-light-purple">linked</span>
       </a>
