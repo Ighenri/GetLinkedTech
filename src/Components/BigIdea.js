@@ -11,7 +11,7 @@ function BigIdea() {
         <h4 className="text-white font-bold md:text-3xl">
           Introduction to getlinked
         </h4>
-        <h5 className=" text-purple font-bold md:text-3xl mb-4">
+        <h5 className=" text-light-purple font-bold md:text-3xl mb-4">
           tech Hackatheon 1.0
         </h5>
         <p>
