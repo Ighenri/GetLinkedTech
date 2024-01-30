@@ -1,10 +1,9 @@
 import React from 'react'
 import criteria from "../Assets/Imgs/criteria.png"
-import Button from './ReUse/Button';
 
 function Criteria() {
 
-    const criteriaoption = () => [
+    const criteriaoption =  [
       {
         main: "Innovation and Creativity:",
         option:
@@ -44,23 +43,12 @@ function Criteria() {
         <h5 className=" text-light-purple font-bold md:text-2xl mb-4">
           Key attributes
         </h5>
-        {criteriaoption.map((options) => (
-            <p><span>{options.main}</span>
-            {options.option}
-            </p>
+        {criteriaoption.map((data) => (
+          <p className="mb-4 text-sm md:text-base">
+            <span className=" text-light-purple">{data.main}</span> {""}
+            {data.option}
+          </p>
         ))}
-        {/* <p className="mb-4 text-sm md:text-base">
-          <span className=" text-light-purple">Innovation and Creativity:</span>
-          Evaluate the uniqueness and creativity of the solution. Consider
-          whether it addresses a real-world problem in a novel way or introduces
-          innovative features.
-        </p> */}
-        {/* <p className="mb-4 text-sm md:text-base">
-          <span className=" text-light-purple">Innovation and Creativity:</span>
-          Evaluate the uniqueness and creativity of the solution. Consider
-          whether it addresses a real-world problem in a novel way or introduces
-          innovative features.
-        </p> */}
 
         <button className="px-8 mt-6 md:mt-0 md:px-10 py-2 rounded-md text-center font-bold bg-gradient-to-r from-light-purple to-linear  hover:bg-gradient-to-r hover:from-linear to hover:to-black hover:border hover:border-white">
           Read More
