@@ -38,13 +38,15 @@ function Criteria() {
     const [currentValue, setCurrentValue] = useState(intialValue)
 
     const displayValue = criteriaoption.slice(0, currentValue)
+    
+    const isReadMoreVisibile = currentValue < criteriaoption.length
 
     const readMoreHandlers = () => {
-      setCurrentValue(currentValue + 3);
+      setCurrentValue((prevValue) => prevValue === criteriaoption.length ? intialValue : criteriaoption.length)
     }
       
   return (
-    <section className="container flex flex-col md:flex-row justify-evenly items-center min-h-screen text-white mx-auto w-[90%] ">
+    <section className="container flex flex-col md:flex-row justify-evenly items-center min-h-screen text-white mx-auto w-[90%] mb-20">
       <div className="Rules w-[80%] mx-auto md:w-1/2 md:mr-10">
         <img className="w-full " src={criteria} alt="criteria" />
       </div>
@@ -54,18 +56,20 @@ function Criteria() {
           Key attributes
         </h5>
         {displayValue.map((data) => (
-          <p className="mb-4 text-sm md:text-base">
+          <p key={data.main} className="mb-4 text-sm md:text-base">
             <span className=" text-light-purple">{data.main}</span> {""}
             {data.option}
           </p>
         ))}
 
-        <button
-          onClick={readMoreHandlers}
-          className="px-8 mt-6 md:mt-0 md:px-10 py-2 rounded-md text-center font-bold bg-gradient-to-r from-light-purple to-linear  hover:bg-gradient-to-r hover:from-linear to hover:to-black hover:border hover:border-white"
-        >
-          Read More
-        </button>
+        {isReadMoreVisibile && (
+          <button
+            onClick={readMoreHandlers}
+            className="px-8 mt-6 md:mt-0 md:px-10 py-2 rounded-md text-center font-bold bg-gradient-to-r from-light-purple to-linear  hover:bg-gradient-to-r hover:from-linear to hover:to-black hover:border hover:border-white"
+          >
+            {currentValue === criteriaoption.length ? 'Show Less' : 'Show More'}
+          </button>
+        )}
       </div>
     </section>
   );
