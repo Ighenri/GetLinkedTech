@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import criteria from "../Assets/Imgs/criteria.png"
 
 function Criteria() {
@@ -32,6 +32,16 @@ function Criteria() {
           "Judges will Ensure that the team adhered to the rules and guidelines of the hackathon, including deadlines, use of specific technologies or APIs, and any other competition-specific requirements",
       },
     ];
+
+    const intialValue = 3;
+
+    const [currentValue, setCurrentValue] = useState(intialValue)
+
+    const displayValue = criteriaoption.slice(0, currentValue)
+
+    const readMoreHandlers = () => {
+      setCurrentValue(currentValue + 3);
+    }
       
   return (
     <section className="container flex flex-col md:flex-row justify-evenly items-center min-h-screen text-white mx-auto w-[90%] ">
@@ -43,14 +53,17 @@ function Criteria() {
         <h5 className=" text-light-purple font-bold md:text-2xl mb-4">
           Key attributes
         </h5>
-        {criteriaoption.map((data) => (
+        {displayValue.map((data) => (
           <p className="mb-4 text-sm md:text-base">
             <span className=" text-light-purple">{data.main}</span> {""}
             {data.option}
           </p>
         ))}
 
-        <button className="px-8 mt-6 md:mt-0 md:px-10 py-2 rounded-md text-center font-bold bg-gradient-to-r from-light-purple to-linear  hover:bg-gradient-to-r hover:from-linear to hover:to-black hover:border hover:border-white">
+        <button
+          onClick={readMoreHandlers}
+          className="px-8 mt-6 md:mt-0 md:px-10 py-2 rounded-md text-center font-bold bg-gradient-to-r from-light-purple to-linear  hover:bg-gradient-to-r hover:from-linear to hover:to-black hover:border hover:border-white"
+        >
           Read More
         </button>
       </div>
