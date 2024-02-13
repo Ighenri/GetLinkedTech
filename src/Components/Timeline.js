@@ -1,5 +1,5 @@
 import React from "react";
-
+import "./Timeline.css"
 function Timeline() {
   const Timeline = [
     {
@@ -40,37 +40,54 @@ function Timeline() {
     },
   ];
 
+  // const mappedTimeline = Timeline.map(({id, title, text, date}) => ({
+  //   id,
+  //   title,
+  //   text: text,
+  //   date: date
+  // }));
+
   return (
-    <section className="container grid  text-white mb-20">
+    <section className="container grid  text-white mb-20 w-[90%] mx-auto">
       <div className="grid text-center text-base mb-10">
         <h4 className=" text-2xl font-bold">Timeline</h4>
-        <p className="">
+        <p className="w-[400px] mx-auto">
           Here is the breakdown of the time we anticipate using for the upcoming
           event.
         </p>
       </div>
 
-      <div className="flex justify-evenly items-center ">
-        <div className="timelineDetails w-[450px] ">
-          <h4 className="text-light-purple text-center">
-            Hackathon Announcement
-          </h4>
-          <p className="text-right ">
-            The getlinked tech hackathon 1.0 is formally announced to the
-            general public and teams begin to get ready to register
-          </p>
+      {Timeline.map((timeline) => (
+        <div
+          className={`${
+            timeline.id % 2 != 0 ? "flip" : ""
+          } grid grid-cols-3 gap-4 justify-evenly items-center`}
+        >
+          <div
+            className={`${timeline.id % 2 != 0 ? "flip" : ""} timelineDetails`}
+          >
+            <h4 className="text-light-purple">{timeline.title}</h4>
+            <p className=" text-sm">{timeline.text}</p>
+          </div>
+          <div className="flex flex-col items-center ">
+            <div className=" h-[3rem] w-[2px] border bg-light-purple border-light-purple mb-3"></div>
+            <p
+              className={`${
+                timeline.id % 2 != 0 ? "flip" : ""
+              } timelineNumber bg-light-purple rounded-full flex items-center justify-center text-white w-6 h-6 text-xs`}
+            >
+              {timeline.id}
+            </p>
+          </div>
+          <div
+            className={`${
+              timeline.id % 2 != 0 ? "flip" : ""
+            } timelineDate text-light-purple`}
+          >
+            <p>{timeline.date}</p>
+          </div>
         </div>
-        <div className="flex flex-col items-center ">
-          <div className=" h-20 w-[2px] border bg-light-purple border-light-purple mb-3"></div>
-          <p className="timelineNumber bg-light-purple rounded-full flex items-center justify-center text-white w-8 h-8">
-            1
-          </p>
-        </div>
-
-        <div className="timelineDate  ">
-          <p>November 18, 2023</p>
-        </div>
-      </div>
+      ))}
     </section>
   );
 }
