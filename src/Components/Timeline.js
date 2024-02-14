@@ -1,5 +1,6 @@
 import React from "react";
-import "./Timeline.css"
+import "./Timeline.css";
+
 function Timeline() {
   const Timeline = [
     {
@@ -40,40 +41,57 @@ function Timeline() {
     },
   ];
 
-  // const mappedTimeline = Timeline.map(({id, title, text, date}) => ({
-  //   id,
-  //   title,
-  //   text: text,
-  //   date: date
-  // }));
-
   return (
     <section className="container grid  text-white mb-20 w-[90%] mx-auto">
-      <div className="grid text-center text-base mb-10">
-        <h4 className=" text-2xl font-bold">Timeline</h4>
-        <p className="w-[400px] mx-auto">
+      <div className="grid text-center text-base mt-10">
+        <h4 className=" text-lg md:text-2xl font-bold">Timeline</h4>
+        <p className="text-sm mb-4 mx-auto md:w-[400px]  md:text-lg ">
           Here is the breakdown of the time we anticipate using for the upcoming
           event.
         </p>
       </div>
 
+      {/* mobile view */}
+      {Timeline.map((timeline) => (
+        <div className="flex mb-8 md:hidden">
+          <div className="flex flex-col items-center mr-2">
+            <div className=" h-[5rem] w-[2px] border bg-light-purple border-light-purple mb-3"></div>
+            <p className="timelineNumber bg-light-purple rounded-full flex items-center justify-center text-white w-6 h-6 text-xs">
+              {timeline.id}
+            </p>
+          </div>
+          <div>
+            <h3 className="text-light-purple mb-2 text-sm sm:text-lg">
+              {timeline.title}
+            </h3>
+            <p className="text-sm md:text-lg ">{timeline.text}</p>
+            <p className="text-sm  text-light-purple mt-2 sm:text-lg">
+              {timeline.date}
+            </p>
+          </div>
+        </div>
+      ))}
+      <div></div>
+
+      {/* desktop view */}
       {Timeline.map((timeline) => (
         <div
+          key={timeline.id}
           className={`${
-            timeline.id % 2 != 0 ? "flip" : ""
-          } grid grid-cols-3 gap-4 justify-evenly items-center`}
+            timeline.id % 2 !== 0 ? "flip" : ""
+          } hidden md:grid grid-cols-3 gap-4 justify-evenly items-center`}
         >
           <div
-            className={`${timeline.id % 2 != 0 ? "flip" : ""} timelineDetails`}
+            className={`${timeline.id % 2 !== 0 ? "flip" : ""} timelineDetails`}
           >
-            <h4 className="text-light-purple">{timeline.title}</h4>
+            <h4 className="text-light-purple text-md">{timeline.title}</h4>
             <p className=" text-sm">{timeline.text}</p>
           </div>
           <div className="flex flex-col items-center ">
-            <div className=" h-[3rem] w-[2px] border bg-light-purple border-light-purple mb-3"></div>
+            <div className=" h-[2rem] w-[2px] border bg-light-purple border-light-purple mb-3"></div>
             <p
               className={`${
-                timeline.id % 2 != 0 ? "flip" : ""
+                timeline.id % 2 !== 0 ? "flip" : ""
               } timelineNumber bg-light-purple rounded-full flex items-center justify-center text-white w-6 h-6 text-xs`}
             >
               {timeline.id}
@@ -81,7 +99,7 @@ function Timeline() {
           </div>
           <div
             className={`${
-              timeline.id % 2 != 0 ? "flip" : ""
+              timeline.id % 2 !== 0 ? "flip" : ""
             } timelineDate text-light-purple`}
           >
             <p>{timeline.date}</p>

@@ -5,6 +5,8 @@ import Header from "./Components/Header";
 import HeroPage from "./Components/HeroPage";
 import Rules from "./Components/Rules"
 import Timeline from "./Components/Timeline";
+import Award from "./Components/Award";
+
 function App() {
   return (
     <div className="App w-screen">
@@ -15,6 +17,7 @@ function App() {
       <Criteria/>
       <Faq />
       <Timeline />
+      <Award/>
     </div>
   );
 }
