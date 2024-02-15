@@ -44,7 +44,7 @@ function Timeline() {
   return (
     <section className="container grid  text-white mb-20 w-[90%] mx-auto">
       <div className="grid text-center text-base mt-10">
-        <h4 className=" text-lg md:text-2xl font-bold">Timeline</h4>
+        <h4 className=" text-lg md:text-4xl font-bold">Timeline</h4>
         <p className="text-sm mb-4 mx-auto md:w-[400px]  md:text-lg ">
           Here is the breakdown of the time we anticipate using for the upcoming
           event.
@@ -84,11 +84,11 @@ function Timeline() {
           <div
             className={`${timeline.id % 2 !== 0 ? "flip" : ""} timelineDetails`}
           >
-            <h4 className="text-light-purple text-md">{timeline.title}</h4>
-            <p className=" text-sm">{timeline.text}</p>
+            <h4 className="text-light-purple text-lg">{timeline.title}</h4>
+            <p className=" text-md">{timeline.text}</p>
           </div>
           <div className="flex flex-col items-center ">
-            <div className=" h-[2rem] w-[2px] border bg-light-purple border-light-purple mb-3"></div>
+            <div className=" h-[4rem] w-[2px] border bg-light-purple border-light-purple mb-3"></div>
             <p
               className={`${
                 timeline.id % 2 !== 0 ? "flip" : ""
@@ -100,7 +100,7 @@ function Timeline() {
           <div
             className={`${
               timeline.id % 2 !== 0 ? "flip" : ""
-            } timelineDate text-light-purple`}
+            } text-lg timelineDate text-light-purple`}
           >
             <p>{timeline.date}</p>
           </div>

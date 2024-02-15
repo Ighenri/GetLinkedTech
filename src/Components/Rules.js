@@ -5,8 +5,8 @@ function Rules() {
   return (
     <section className="container flex flex-col md:flex-row justify-evenly items-center min-h-screen text-white mx-auto w-[90%] ">
       <div className="writeup w-[80%]  mx-auto md:w-1/2">
-        <h4 className="text-white font-bold md:text-3xl">Rules and</h4>
-        <h5 className=" text-light-purple font-bold md:text-3xl mb-4">
+        <h4 className="text-white font-bold md:text-4xl">Rules and</h4>
+        <h5 className=" text-light-purple font-bold md:text-4xl mb-4">
           Guildines
         </h5>
         <p>

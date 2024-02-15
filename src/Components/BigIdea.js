@@ -8,10 +8,10 @@ function BigIdea() {
         <img className="w-full " src={idea} alt="bigidea" />
       </div>
       <div className="writeup w-[80%]  mx-auto md:w-1/2">
-        <h4 className="text-white font-bold md:text-3xl">
+        <h4 className="text-white font-bold md:text-4xl">
           Introduction to getlinked
         </h4>
-        <h5 className=" text-light-purple font-bold md:text-3xl mb-4">
+        <h5 className=" text-light-purple font-bold md:text-4xl mb-4">
           tech Hackatheon 1.0
         </h5>
         <p>

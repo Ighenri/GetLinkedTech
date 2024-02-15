@@ -6,6 +6,8 @@ import HeroPage from "./Components/HeroPage";
 import Rules from "./Components/Rules"
 import Timeline from "./Components/Timeline";
 import Award from "./Components/Award";
+import Sponsors from "./Components/Sponsors";
+import Policy from "./Components/Policy";
 
 function App() {
   return (
@@ -18,6 +20,8 @@ function App() {
       <Faq />
       <Timeline />
       <Award/>
+      <Sponsors/>
+      <Policy/>
     </div>
   );
 }

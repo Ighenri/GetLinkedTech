@@ -50,8 +50,8 @@ function Criteria() {
         <img className="w-full " src={criteria} alt="criteria" />
       </div>
       <div className="writeup w-[80%] text-center md:text-left mx-auto md:w-1/2">
-        <h4 className="text-white font-bold md:text-3xl">Judging Criteria</h4>
-        <h5 className=" text-light-purple font-bold md:text-2xl mb-4">
+        <h4 className="text-white font-bold md:text-4xl">Judging Criteria</h4>
+        <h5 className=" text-light-purple font-bold md:text-4xl mb-4">
           Key attributes
         </h5>
         {displayValue.map((data) => (

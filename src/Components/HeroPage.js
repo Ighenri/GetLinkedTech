@@ -9,7 +9,7 @@ import smartglass from "../Assets/Imgs/man-wearing-smart-glasses.png";
 
 export default function HeroPage() {
   return (
-    <section className="text-white px-5 md:px-20 h-screen translate-y-32 md:translate-y-1/4 ">
+    <section className="text-white px-5 md:px-20 h-screen translate-y-32 md:translate-y-1/4 mb-40 border-b-4 border-b-white">
       <div className="flex justify-end md:text-2xl mr-4">
         <p>Igniting a Revolution in HR Innovation</p>
       </div>
@@ -26,9 +26,9 @@ export default function HeroPage() {
             <img className="h-6 md:h-8 lg:10 inline" src={fire} alt="" />
           </p>
           <p className="mt-4 leading-6 md:text-base lg:w-[70%]">
-            Participate in getlinked tech Hackathon 2023 stand a chance
-            to win a Big prize
-          </p> 
+            Participate in getlinked tech Hackathon 2023 stand a chance to win a
+            Big prize
+          </p>
           <Button children="Register" styleList="changeThis" />
 
           <div className="countdown grid grid-cols-3 w-fit lg:w-1/2 text-center items-center">
