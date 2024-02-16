@@ -4,14 +4,14 @@ import Mark from "../Assets/Imgs/list terms.png";
 
 function Policy() {
   return (
-    <section className="text-white grid lg:grid-cols-2 h-screen mx-auto w-[90%] place-items-center text-center lg:text-left text-sm sm:text-base">
-      <div className="policyTextContainer w-[300px]">
+    <section className="text-white grid lg:grid-cols-2 lg:gap-28 mx-auto w-[90%] place-items-center text-sm sm:text-base mt-10">
+      <div className="policyTextContainer w-[300px] mx-auto">
         <div className="policyText">
           <h4 className="text-2xl font-bold md:text-4xl">Privacy Policy and</h4>
           <h4 className="text-2xl font-bold md:text-4xl text-light-purple">
             Terms
           </h4>
-          <p className="my-8 text-sm text">
+          <p className="my-6 text-sm text">
             Last updated on September 12, 2023
           </p>
           <p className="sm:w-[400px] mx-auto md:mx-0">
@@ -20,7 +20,7 @@ function Policy() {
           </p>
         </div>
 
-        <div className="border-2 border-light-purple p-10 mt-14 sm:w-[500px] mx-auto flex flex-col justify-center items-center text-left ">
+        <div className="border-2 border-light-purple p-10 mt-10 md:w-[450px] sm:w-[350px] mx-auto flex flex-col justify-center items-center text-left ">
           <p className="tracking-wide">
             At getlinked tech Hackathon 1.0, we value your privacy and are
             committed to protecting your personal information. This Privacy
@@ -29,7 +29,7 @@ function Policy() {
             participating in our event, you consent to the practices described
             in this policy.
           </p>
-          <div className="mt-10">
+          <div className="mt-4">
             <h4 className="text-light-purple text-xl font-bold  mb-4">
               Licensing Policy
             </h4>
@@ -59,7 +59,7 @@ function Policy() {
         </div>
       </div>
 
-      <div className="policyImageContainer w-[350px] md:w-[400px] lg:w-[420px] lg:place-self-center">
+      <div className="policyImageContainer w-[350px] md:w-[400px] lg:place-self-center">
         <img src={policy} alt="" />
       </div>
     </section>
