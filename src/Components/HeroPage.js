@@ -6,12 +6,14 @@ import fire from "../Assets/Icons/fire.png";
 import bulb from "../Assets/Icons/bulb.png";
 import earth from "../Assets/Imgs/earth.png";
 import smartglass from "../Assets/Imgs/man-wearing-smart-glasses.png";
+import vector from "../Assets/Icons/Vector 4.png"
 
 export default function HeroPage() {
   return (
-    <section className="text-white px-5 md:px-20 h-screen translate-y-32 md:translate-y-1/4 mb-40 border-b-4 border-b-white">
+    <section className="text-white px-5 md:px-20 min-h-screen translate-y-32 md:translate-y-1/4 mb-40 border-b-4 border-b-white">
       <div className="flex justify-end md:text-2xl mr-4">
-        <p>Igniting a Revolution in HR Innovation</p>
+        <p className="relative italic">Igniting a Revolution in HR Innovation</p>
+        <img className="absolute top-8 w-28 md:w-40" src={vector} alt="vector" />
       </div>
 
       <div className="Hero grid grid-cols-1 mt-8 text-center md:text-left md:flex ">

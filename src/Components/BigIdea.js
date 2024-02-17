@@ -3,7 +3,7 @@ import idea from "../Assets/Imgs/The big idea.png"
 
 function BigIdea() {
   return (
-    <section className="container flex flex-col md:flex-row justify-evenly items-center mt-60 md:mt-0 lg:mt-0 min-h-screen text-white mx-auto w-[90%] ">
+    <section className="container flex flex-col md:flex-row justify-evenly items-center mt-60 md:mt-0 lg:mt-0 h-screen text-white mx-auto w-[90%] ">
       <div className="bigIdeal w-[80%] mx-auto md:w-1/2 md:mr-10">
         <img className="w-full " src={idea} alt="bigidea" />
       </div>
