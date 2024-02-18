@@ -42,7 +42,7 @@ function Timeline() {
   ];
 
   return (
-    <section className="container grid  text-white mb-20 w-[90%] mx-auto">
+    <section className="container grid  text-white mb-20 w-[90%] mx-auto border-b-2 border-gray-800">
       <div className="grid text-center text-base mt-10">
         <h4 className=" text-lg md:text-4xl font-bold">Timeline</h4>
         <p className="text-sm mb-4 mx-auto md:w-[400px]  md:text-lg ">

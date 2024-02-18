@@ -7,8 +7,8 @@ import CallIcon from "@mui/icons-material/Call";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 function Footer() {
   return (
-    <footer className="text-white grid md:place-items-center my-10 mx-auto w-[90%] text-sm h-[60vh]">
-      <div className="footerContainer grid   md:place-items-center md:grid-cols-3">
+    <footer className="text-white grid md:place-items-center my-10 mx-auto w-[90%] text-sm md:h-[60vh]">
+      <div className="footerContainer grid md:place-items-center md:grid-cols-3">
         <div className="grid gap-8">
           <div>
             <a href="html" className="mr-auto text-2xl md:text-3xl">
@@ -65,7 +65,7 @@ function Footer() {
               {" "}
               <LocationOnIcon />
             </span>{" "}
-            +27,Alara Street <br /> Yaba 100012 <br /> Lagos State
+            +27,Alara Street Yaba 100012  Lagos State
           </p>
         </div>
       </div>

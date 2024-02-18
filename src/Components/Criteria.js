@@ -45,11 +45,11 @@ function Criteria() {
   };
 
   return (
-    <section className="container flex flex-col md:flex-row justify-evenly items-center min-h-screen text-white mx-auto w-[90%] mb-20">
+    <section className="container flex flex-col md:flex-row justify-evenly items-center min-h-screen text-white mx-auto w-[90%] mb-20 mt-8 md:mt-auto border-b-2 border-gray-800">
       <div className="Rules w-[80%] mx-auto md:w-1/2 md:mr-10">
         <img className="w-full " src={criteria} alt="criteria" />
       </div>
-      <div className="writeup w-[80%] text-center md:text-left mx-auto md:w-1/2">
+      <div className="writeup w-[80%] text-center md:text-left mx-auto md:w-1/2  mb-8">
         <h4 className="text-white font-bold md:text-4xl">Judging Criteria</h4>
         <h5 className=" text-light-purple font-bold md:text-4xl mb-4">
           Key attributes

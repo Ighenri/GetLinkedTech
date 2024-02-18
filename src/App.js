@@ -12,7 +12,7 @@ import Footer from "./Components/Footer";
 
 function App() {
   return (
-    <div className="App w-screen">
+    <div className="App w-screen bg-dark-purple">
       <Header />
       <HeroPage />
       <BigIdea/>

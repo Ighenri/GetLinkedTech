@@ -4,7 +4,7 @@ import Mark from "../Assets/Imgs/list terms.png";
 
 function Policy() {
   return (
-    <section className="text-white grid lg:grid-cols-2 lg:gap-28 mx-auto w-[90%] place-items-center text-sm sm:text-base mt-10">
+    <section className="text-white grid lg:grid-cols-2 lg:gap-28 mx-auto w-[90%] place-items-center text-sm sm:text-base mt-10 border-b-2 border-gray-800">
       <div className="policyTextContainer w-[300px] mx-auto">
         <div className="policyText">
           <h4 className="text-2xl font-bold md:text-4xl">Privacy Policy and</h4>
@@ -20,7 +20,7 @@ function Policy() {
           </p>
         </div>
 
-        <div className="border-2 border-light-purple p-10 mt-10 md:w-[450px] sm:w-[350px] mx-auto flex flex-col justify-center items-center text-left ">
+        <div className="border-2 border-light-purple p-10 mt-10 md:w-[450px] sm:w-[350px] mx-auto flex flex-col justify-center items-center text-left mb-8 ">
           <p className="tracking-wide">
             At getlinked tech Hackathon 1.0, we value your privacy and are
             committed to protecting your personal information. This Privacy

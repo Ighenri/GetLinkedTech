@@ -6,22 +6,34 @@ import fire from "../Assets/Icons/fire.png";
 import bulb from "../Assets/Icons/bulb.png";
 import earth from "../Assets/Imgs/earth.png";
 import smartglass from "../Assets/Imgs/man-wearing-smart-glasses.png";
-import vector from "../Assets/Icons/Vector 4.png"
+import vector from "../Assets/Icons/Vector 4.png";
+import purpleFlare from "../Assets/Icons/purple_flare_circle.png";
 
 export default function HeroPage() {
   return (
-    <section className="text-white px-5 md:px-20 min-h-screen translate-y-32 md:translate-y-1/4 mb-40 border-b-4 border-b-white">
+    <section className="text-white px-5 md:px-20 min-h-screen translate-y-32 md:translate-y-1/4 mb-40 border-b-2 border-gray-800">
       <div className="flex justify-end md:text-2xl mr-4">
-        <p className="relative italic">Igniting a Revolution in HR Innovation</p>
-        <img className="absolute top-8 w-28 md:w-40" src={vector} alt="vector" />
+        <p className="relative italic text-light-purple">
+          Igniting a Revolution in HR Innovation
+        </p>
+        <img
+          className="absolute top-8 w-28 md:w-40"
+          src={vector}
+          alt="vector"
+        />
       </div>
 
-      <div className="Hero grid grid-cols-1 mt-8 text-center md:text-left md:flex ">
-        <div className="countdownSection flex flex-col mt-10 items-center w-full md:w-1/2 md:block">
-          <p className="block text-4xl lg:text-6xl font-extrabold relative">
+      <div className="Hero grid grid-cols-1 mt-8 text-center md:text-left md:flex relative mix-blend-lighten">
+        <img
+          className="absolute md:w-[700px] z-0 -top-[20%] -left-[20%] md:-left-[25%] md:-top-[50%] lg:-top-[40%] lg:-left-[5%] opacity-50 mix-blend-lighten"
+          src={purpleFlare}
+          alt=""
+        />
+        <div className="countdownSection flex flex-col mt-10 items-center w-full md:w-1/2 md:block ">
+          <p className="block text-4xl lg:text-6xl font-extrabold relative mix-blend-lighten">
             getlinked Tech Hackathon{" "}
             <span className="absolute -top-10 sm:left-40 md:left-auto md:-top-14">
-              <img className=" w-5 md:w-10" src={bulb} alt="bulb" />
+              <img className=" w-5 md:w-10 " src={bulb} alt="bulb" />
             </span>
             <span className="text-light-purple">1.0</span>
             <img className="h-6 md:h-8 lg:10 inline px-1" src={chain} alt="" />

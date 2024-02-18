@@ -4,7 +4,7 @@ import Cup from "../Assets/Imgs/cup.png";
 
 function Award() {
   return (
-    <section className=" grid place-items-center md:flex items-center justify-center text-white w-[90%] mx-auto">
+    <section className=" grid place-items-center md:flex items-center justify-center text-white w-[90%] mx-auto border-b-2 border-gray-800">
       {/* MOBILE VIEW */}
       <div className="md:hidden medalText grid place-items-center text-center mb-8 md:mb-20">
         <h4 className="text-xl font-bold">Prizes and </h4>
@@ -18,7 +18,7 @@ function Award() {
       <div className="cupContainer w-[350px] md:w-[50%] my-10 md:mb-auto">
         <img className="" src={Cup} alt="cup" />
       </div>
-      <div className="medalsContainer w-[350px] md:w-[50%] ">
+      <div className="medalsContainer w-[350px] md:w-[50%]  mb-8">
         <div className="medalText hidden md:grid place-content-center mb-8 md:mb-20">
           <h4 className="text-4xl font-bold">Prizes and </h4>
           <h4 className="text-4xl text-light-purple">Rewards</h4>
