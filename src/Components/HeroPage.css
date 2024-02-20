@@ -4,3 +4,17 @@
   margin-top: 2rem;
   margin-bottom: 4rem;
 }
+
+@keyframes blink {
+  0%, 100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: .4;
+  }
+}
+
+.bulbanimation{
+  animation: blink 4s infinite;
+}

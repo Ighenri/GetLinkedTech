@@ -45,10 +45,10 @@ export default function HeroPage() {
           alt=""
         />
         <div className="countdownSection flex flex-col mt-10 items-center w-full md:w-1/2 md:block ">
-          <p className="block text-4xl lg:text-6xl font-extrabold relative mix-blend-lighten">
+          <p className=" block text-4xl lg:text-6xl font-extrabold relative mix-blend-lighten">
             getlinked Tech Hackathon{" "}
-            <span className="absolute -top-10 sm:left-40 md:left-auto md:-top-14">
-              <img className=" w-5 md:w-10 " src={bulb} alt="bulb" />
+            <span className="bulbanimation absolute -top-10 sm:left-40 md:left-auto md:-top-14">
+              <img className="bulb w-5 md:w-10 " src={bulb} alt="bulb" />
             </span>
             <span className="text-light-purple mix-blend-lighten">1.0</span>
             <img className="h-6 md:h-8 lg:10 inline px-1" src={chain} alt="" />
@@ -92,9 +92,9 @@ export default function HeroPage() {
         </div>
 
         <div className="smartglass relative w-[80%] md:w-[60%] mx-auto lg:w-1/2">
-          <img className="w-full" src={earth} alt="" />
+          <img className="bulbanimation w-full" src={earth} alt="" />
           <img
-            className="absolute top-0 left-0 w-full opacity-50"
+            className=" absolute top-0 left-0 w-full opacity-50"
             src={smartglass}
             alt=""
           />
