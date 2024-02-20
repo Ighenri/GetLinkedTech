@@ -9,6 +9,7 @@ import Award from "./Components/Award";
 import Sponsors from "./Components/Sponsors";
 import Policy from "./Components/Policy";
 import Footer from "./Components/Footer";
+// import Contact from "./Components/Contact";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
       <Sponsors/>
       <Policy/>
       <Footer/>
+      {/* <Contact/> */}
     </div>
   );
 }

@@ -35,7 +35,7 @@ export default function HeroPage() {
             <span className="absolute -top-10 sm:left-40 md:left-auto md:-top-14">
               <img className=" w-5 md:w-10 " src={bulb} alt="bulb" />
             </span>
-            <span className="text-light-purple">1.0</span>
+            <span className="text-light-purple mix-blend-lighten">1.0</span>
             <img className="h-6 md:h-8 lg:10 inline px-1" src={chain} alt="" />
             <img className="h-6 md:h-8 lg:10 inline" src={fire} alt="" />
           </p>

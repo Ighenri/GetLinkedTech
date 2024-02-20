@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import criteria from "../Assets/Imgs/criteria.png";
+import purpleFlare from "../Assets/Icons/purple_flare_circle.png";
 
 function Criteria() {
   const criteriaoption = [
@@ -45,11 +46,17 @@ function Criteria() {
   };
 
   return (
-    <section className="container flex flex-col md:flex-row justify-evenly items-center min-h-screen text-white mx-auto w-[90%] mb-20 mt-8 md:mt-auto border-b-2 border-gray-800">
-      <div className="Rules w-[80%] mx-auto md:w-1/2 md:mr-10">
+    <section className=" container flex flex-col md:flex-row justify-evenly items-center min-h-screen text-white mx-auto w-[90%] mb-20 mt-8 md:mt-auto border-b-2 border-gray-800">
+      <div className="relative Rules w-[80%] mx-auto md:w-1/2 md:mr-10">
         <img className="w-full " src={criteria} alt="criteria" />
+        <img
+          className="absolute md:w-[800px] z-0 -top-[20%] -left-[20%] md:-left-[40%] md:-top-[50%] opacity-50 mix-blend-lighten"
+          src={purpleFlare}
+          alt=""
+        />
       </div>
-      <div className="writeup w-[80%] text-center md:text-left mx-auto md:w-1/2  mb-8">
+
+      <div className="writeup relative w-[80%] text-center md:text-left mx-auto md:w-1/2  mb-8">
         <h4 className="text-white font-bold md:text-4xl">Judging Criteria</h4>
         <h5 className=" text-light-purple font-bold md:text-4xl mb-4">
           Key attributes
@@ -66,6 +73,11 @@ function Criteria() {
         >
           {currentValue === criteriaoption.length ? "Show Less" : "Show More"}
         </button>
+        <img
+          className="absolute md:w-[800px] z-0 left-[70%] md:top-[50%] opacity-50 mix-blend-lighten"
+          src={purpleFlare}
+          alt=""
+        />
       </div>
     </section>
   );
