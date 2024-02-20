@@ -53,7 +53,7 @@ function Timeline() {
 
       {/* mobile view */}
       {Timeline.map((timeline) => (
-        <div className="flex mb-8 md:hidden">
+        <div key={timeline.id}  className="flex mb-8 md:hidden">
           <div className="flex flex-col items-center mr-2">
             <div className=" h-[5rem] w-[2px] border bg-light-purple border-light-purple mb-3"></div>
             <p className="timelineNumber bg-light-purple rounded-full flex items-center justify-center text-white w-6 h-6 text-xs">

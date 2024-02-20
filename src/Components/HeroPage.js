@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./HeroPage.css";
 import Button from "./ReUse/Button";
 import chain from "../Assets/Icons/chain.png";
@@ -10,12 +10,27 @@ import vector from "../Assets/Icons/Vector 4.png";
 import purpleFlare from "../Assets/Icons/purple_flare_circle.png";
 
 export default function HeroPage() {
+  const textToType = "Iggniting a Revolution in HR Innovation!";
+  const [displayText, setDisplayText] = useState("");
+
+  useEffect(() => {
+    let index = 0;
+    const textToShow = setInterval(() => {
+      setDisplayText((prevState) => prevState + textToType[index]);
+      index++;
+
+      if (index === textToType.length - 1) {
+        clearInterval(textToShow);
+      }
+    }, 50);
+// https://youtube.com/watch?v=LCEgHntqBps
+    return () => clearInterval(textToShow);
+  }, [textToType]);
+
   return (
     <section className="text-white px-5 md:px-20 min-h-screen translate-y-32 md:translate-y-1/4 mb-40 border-b-2 border-gray-800">
       <div className="flex justify-end md:text-2xl mr-4">
-        <p className="relative italic text-light-purple">
-          Igniting a Revolution in HR Innovation
-        </p>
+        <p className="relative italic text-light-purple">{displayText}</p>
         <img
           className="absolute top-8 w-28 md:w-40"
           src={vector}
