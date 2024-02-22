@@ -10,10 +10,11 @@ import vector from "../Assets/Icons/Vector 4.png";
 import purpleFlare from "../Assets/Icons/purple_flare_circle.png";
 
 export default function HeroPage() {
+  // {ANIMATION TEXT-TYPING}
   const textToType = "Iggniting a Revolution in HR Innovation!";
   const [displayText, setDisplayText] = useState("");
 
-  useEffect(() => {
+  useEffect = (() => {
     let index = 0;
     const textToShow = setInterval(() => {
       setDisplayText((prevState) => prevState + textToType[index]);
@@ -23,9 +24,42 @@ export default function HeroPage() {
         clearInterval(textToShow);
       }
     }, 50);
-// https://youtube.com/watch?v=LCEgHntqBps
+    // https://youtube.com/watch?v=LCEgHntqBps
     return () => clearInterval(textToShow);
   }, [textToType]);
+
+  // TIMER
+  const calculateTimeRemaining = () => {
+    const todayDate = new Date();
+    const eventDate = new Date("March 31, 2024, 10:00:00");
+    const remainingDate = eventDate - todayDate;
+
+    const days = Math.floor(remainingDate / (60 * 60 * 1000 * 24));
+    const hours = Math.floor(
+      (remainingDate % (60 * 60 * 1000 * 24)) / (60 * 60 * 1000)
+    );
+    const minutes = Math.floor(
+      (remainingDate % (60 * 60 * 1000)) / (60 * 1000)
+    );
+    const seconds = Math.floor((remainingDate % (60 * 1000)) / 1000);
+
+    return {days, hours, minutes, seconds};
+  };
+
+  const [timeRemaining, settimeRemaining] = useState(calculateTimeRemaining);
+
+  useEffect =
+    (() => {
+      const timer = setInterval(() => {
+        settimeRemaining(calculateTimeRemaining());
+      }, 1000);
+
+      return () => clearInterval(timer);
+    },
+    []);
+
+    const formatTime = (value) => (value < 10 ? `0${value}` : value);
+
 
   return (
     <section className="text-white px-5 md:px-20 min-h-screen translate-y-32 md:translate-y-1/4 mb-40 border-b-2 border-gray-800">
@@ -47,8 +81,12 @@ export default function HeroPage() {
         <div className="countdownSection flex flex-col mt-10 items-center w-full md:w-1/2 md:block ">
           <p className=" block text-4xl lg:text-6xl font-extrabold relative mix-blend-lighten">
             getlinked Tech Hackathon{" "}
-            <span className="bulbanimation absolute -top-10 sm:left-40 md:left-auto md:-top-14">
-              <img className="bulb w-5 md:w-10 " src={bulb} alt="bulb" />
+            <span className=" absolute -top-10 sm:left-40 md:left-auto md:-top-14">
+              <img
+                className="bulbanimation w-5 md:w-10 "
+                src={bulb}
+                alt="bulb"
+              />
             </span>
             <span className="text-light-purple mix-blend-lighten">1.0</span>
             <img className="h-6 md:h-8 lg:10 inline px-1" src={chain} alt="" />
@@ -63,29 +101,38 @@ export default function HeroPage() {
           <div className="countdown grid grid-cols-3 w-fit lg:w-1/2 text-center items-center">
             <div>
               <span id="hour0" className="text-5xl">
-                0
+                {formatTime(timeRemaining.days)}
               </span>
-              <span id="hour1" className="text-5xl">
-                0
+              {/* <span id="hour1" className="text-5xl">
+                {formatTime(timeRemaining.hours)}
+              </span> */}
+              <span>D</span>
+            </div>
+            <div>
+              <span id="hour0" className="text-5xl">
+                {formatTime(timeRemaining.hours)}
               </span>
+              {/* <span id="hour1" className="text-5xl">
+                {formatTime(timeRemaining.hours)}
+              </span> */}
               <span>H</span>
             </div>
             <div>
               <span id="minute0" className="text-5xl">
-                0
+                {formatTime(timeRemaining.minutes)}
               </span>
-              <span id="minute1" className="text-5xl">
-                0
-              </span>
+              {/* <span id="minute1" className="text-5xl">
+                {formatTime(timeRemaining.minutes)}
+              </span> */}
               <span>M</span>
             </div>
             <div>
               <span id="second0" className="text-5xl">
-                0
+                {formatTime(timeRemaining.seconds)}
               </span>
-              <span id="second1" className="text-5xl">
-                0
-              </span>
+              {/* <span id="second1" className="text-5xl">
+                {formatTime(timeRemaining.seconds)}{" "}
+              </span> */}
               <span>S</span>
             </div>
           </div>
