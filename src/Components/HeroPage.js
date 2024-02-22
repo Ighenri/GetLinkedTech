@@ -34,14 +34,10 @@ export default function HeroPage() {
     const eventDate = new Date("March 31, 2024, 10:00:00");
     const remainingDate = eventDate - todayDate;
 
-    const days = Math.floor(remainingDate / (60 * 60 * 1000 * 24));
-    const hours = Math.floor(
-      (remainingDate % (60 * 60 * 1000 * 24)) / (60 * 60 * 1000)
-    );
-    const minutes = Math.floor(
-      (remainingDate % (60 * 60 * 1000)) / (60 * 1000)
-    );
-    const seconds = Math.floor((remainingDate % (60 * 1000)) / 1000);
+    const days = Math.floor((remainingDate / (60 * 60 * 1000 * 24)))
+    const hours = Math.floor((remainingDate % (60 * 60 * 1000 * 24)) / (60 * 60 * 1000))
+    const minutes = Math.floor((remainingDate % (60 * 60 * 1000)) / (60 * 1000))
+    const seconds = Math.floor((remainingDate % (60 * 1000)) / 1000)
 
     return {days, hours, minutes, seconds};
   };
@@ -52,7 +48,7 @@ export default function HeroPage() {
     (() => {
       const timer = setInterval(() => {
         settimeRemaining(calculateTimeRemaining());
-      }, 1000);
+      }, 100);
 
       return () => clearInterval(timer);
     },
