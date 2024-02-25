@@ -95,24 +95,24 @@ export default function HeroPage() {
           </p>
           <Button children="Register" styleList="changeThis" />
 
-          <div className="countdown grid gap-4 mb-8 md:mb-auto grid-cols-3 w-fit lg:w-1/2 text-center items-center">
-            <div>
-              <span id="hour0" className="text-5xl">
+          <div className="countdown grid gap-4 sm:gap-6 mb-8 md:mb-auto grid-cols-3 w-fit lg:w-1/2 text-center items-center">
+            <div className="time">
+              <span id="hour0" className="text-4xl lg:text-5xl mr-2">
                 {formatTime(timeRemaining.hours)}
               </span>
-              <span>H</span>
+              <span className=" p-1 sm:p-2">H</span>
             </div>
-            <div>
-              <span id="minute0" className="text-5xl">
+            <div className="time">
+              <span id="minute0" className="text-4xl lg:text-5xl mr-2">
                 {formatTime(timeRemaining.minutes)}
               </span>
-              <span>M</span>
+              <span className=" p-1 sm:p-2">M</span>
             </div>
-            <div>
-              <span id="second0" className="text-5xl">
+            <div className="time">
+              <span id="second0" className="text-4xl lg:text-5xl mr-2">
                 {formatTime(timeRemaining.seconds)}
               </span>
-              <span>S</span>
+              <span className=" p-1 sm:p-2">S</span>
             </div>
           </div>
         </div>
