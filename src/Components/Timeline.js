@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./Timeline.css";
 
 function Timeline() {
@@ -41,8 +41,34 @@ function Timeline() {
     },
   ];
 
+  const [isVisible, setIsVisible] = useState(false);
+
+  const handleScroll = () => {
+    const scrollPosition = window.scrollY;
+    const currentPosition = 3800
+
+    if(scrollPosition > currentPosition) {
+      setIsVisible(true);
+    } else (
+      setIsVisible(false)
+    )
+  }
+  console.log(window.scrollY);
+
+  useEffect(()=> {
+    window.addEventListener("scroll", handleScroll)
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll)
+    }
+
+  }, [])
+
   return (
-    <section id="timeline" className="container grid text-white mb-20 w-[90%] mx-auto border-b-2 border-gray-800">
+    <section
+      id="timeline"
+      className="container grid text-white mb-20 w-[90%] mx-auto border-b-2 border-gray-800"
+    >
       <div className="grid text-center text-base mt-10">
         <h4 className=" text-lg md:text-4xl font-bold">Timeline</h4>
         <p className="text-sm mb-4 mx-auto md:w-[400px]  md:text-lg ">
@@ -53,9 +79,10 @@ function Timeline() {
 
       {/* mobile view */}
       {Timeline.map((timeline) => (
-        <div key={timeline.id}  className="flex mb-8 md:hidden">
+        <div key={timeline.id} className="flex mb-8 md:hidden">
           <div className="flex flex-col items-center mr-2">
-            <div className=" h-[5rem] w-[2px] border bg-light-purple border-light-purple mb-3"></div>
+            <div className={`animation_line ${isVisible ? "visible": ""} h-[8rem] w-[2px] border bg-light-purple border-light-purple my-4`}></div>
+
             <p className="timelineNumber bg-light-purple rounded-full flex items-center justify-center text-white w-6 h-6 text-xs">
               {timeline.id}
             </p>
@@ -88,7 +115,7 @@ function Timeline() {
             <p className=" text-md">{timeline.text}</p>
           </div>
           <div className="flex flex-col items-center ">
-            <div className=" h-[4rem] w-[2px] border bg-light-purple border-light-purple mb-3"></div>
+            <div className={`animation_line ${isVisible ? "visible" : " "}  h-[8rem] w-[2px] border bg-light-purple border-light-purple my-4`}></div>
             <p
               className={`${
                 timeline.id % 2 !== 0 ? "flip" : ""
