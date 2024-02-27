@@ -51,7 +51,7 @@ export default function NarBar() {
               onClick={MenuToggle}
             >
               {" "}
-              overview
+              Overview
             </Link>
           </li>
           <li className="md:px-5 lg:px-8 md:text-lg hover:text-purple transition-colors ease-in-out cursor-pointer">

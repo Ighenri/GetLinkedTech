@@ -45,7 +45,7 @@ function Timeline() {
 
   const handleScroll = () => {
     const scrollPosition = window.scrollY;
-    const currentPosition = 3800
+    const currentPosition = 3300
 
     if(scrollPosition > currentPosition) {
       setIsVisible(true);
@@ -81,7 +81,7 @@ function Timeline() {
       {Timeline.map((timeline) => (
         <div key={timeline.id} className="flex mb-8 md:hidden">
           <div className="flex flex-col items-center mr-2">
-            <div className={`animation_line ${isVisible ? "visible": ""} h-[8rem] w-[2px] border bg-light-purple border-light-purple my-4`}></div>
+            <div className={`animation_line ${isVisible ? "visible": ""} h-[8rem] w-[2px] border bg-light-purple border-light-purple my-3`}></div>
 
             <p className="timelineNumber bg-light-purple rounded-full flex items-center justify-center text-white w-6 h-6 text-xs">
               {timeline.id}

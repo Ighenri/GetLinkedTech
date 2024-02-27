@@ -4,7 +4,7 @@ import Mark from "../Assets/Imgs/list terms.png";
 
 function Policy() {
   return (
-    <section className="text-white grid lg:grid-cols-2 lg:gap-28 mx-auto w-[90%] place-items-center text-sm sm:text-base mt-10 border-b-2 border-gray-800">
+    <section className="text-white grid lg:grid-cols-2 lg:gap-28 mx-auto w-[90%] place-items-center text-sm sm:text-base mt-32 md:mt-10 border-b-2 border-gray-800">
       <div className="policyTextContainer w-[320px] mx-auto">
         <div className="policyText">
           <h4 className="text-2xl font-bold md:text-4xl">Privacy Policy and</h4>

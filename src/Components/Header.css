@@ -2,6 +2,7 @@
   .NavBar-List {
     opacity: 0;
     visibility: hidden;
+    transition: all .5s ease-in;
   }
 
   .NavBar-List.active {
