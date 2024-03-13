@@ -72,7 +72,7 @@ export default function NarBar() {
           </li>
           <li className="md:px-5 lg:px-8 md:text-lg hover:text-purple transition-colors ease-in-out cursor-pointer">
             {" "}
-            <NavLink to="Contact">Contact</NavLink>
+            <NavLink to="/Contact">Contact</NavLink>
           </li>
         </ul>
         <Button children="Register" />
