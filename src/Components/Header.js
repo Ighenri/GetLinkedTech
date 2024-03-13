@@ -4,6 +4,7 @@ import menu from "../Assets/Icons/menu.png";
 import CloseMenu from "../Assets/Icons/close.png";
 import "./Header.css";
 import Button from "./ReUse/Button";
+import { NavLink } from "react-router-dom";
 
 export default function NarBar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -71,7 +72,7 @@ export default function NarBar() {
           </li>
           <li className="md:px-5 lg:px-8 md:text-lg hover:text-purple transition-colors ease-in-out cursor-pointer">
             {" "}
-            <a href="#contact">Contact </a>{" "}
+            <NavLink to="Contact">Contact</NavLink>
           </li>
         </ul>
         <Button children="Register" />
