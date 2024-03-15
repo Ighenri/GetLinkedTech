@@ -9,22 +9,10 @@ import Award from "./Components/Award";
 import Sponsors from "./Components/Sponsors";
 import Policy from "./Components/Policy";
 import Footer from "./Components/Footer";
-// import {Routes, Route} from "react-router-dom"
+
 function App() {
   return (
-    <div className="App w-screen bg-dark-purple">
-      {/* <Route path="/" element={<Header />} />
-      <Route path="" element={<HeroPage />} />
-      <Route path="" element={<BigIdea />} />
-      <Route path="" element={ <Rules />} />
-      <Route path="" element={<Criteria />} />
-      <Route path="" element={  <Faq />} />
-      <Route path="" element={ <Timeline />} />
-      <Route path="" element={ <Award />} />
-      <Route path="" element={ <Sponsors />} />
-      <Route path="" element={<Policy />} />
-      <Route path="" element={<Footer />} /> */}
-  
+    <div className="App w-screen">
       <Header />
       <HeroPage />
       <BigIdea />

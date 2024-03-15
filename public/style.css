@@ -4,6 +4,8 @@
   padding: 0;
   box-sizing: border-box;
   background-color: rgb(21, 14, 40);
+  /* background-color: hsla(0, 15%, 23%, 0.03); */
+ ;
 }
 body{
   overflow-x: hidden;
