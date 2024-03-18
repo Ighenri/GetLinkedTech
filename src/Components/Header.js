@@ -13,6 +13,8 @@ export default function NarBar() {
     setIsOpen(!isOpen);
   };
 
+
+
   return (
     <header className="flex justify-between px-10 py-6 w-screen fixed z-20 top-0 right-0 left-0 md:flex-row md:items-center lg:px-12 text-white md:h-24 md:px-8 border-b-2 border-gray-800 bg-dark-purple">
       <a href="#html" className="mr-auto text-2xl md:text-3xl lg:text-4xl">
@@ -75,7 +77,7 @@ export default function NarBar() {
             <NavLink to="/Contact">Contact</NavLink>
           </li>
         </ul>
-        <Button children="Register" />
+        <Button to="/Register" children="Register" />-
       </nav>
 
       <div className="md:invisible flex items-center justify-center z-20">

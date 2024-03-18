@@ -93,7 +93,7 @@ export default function HeroPage() {
             Participate in getlinked tech Hackathon 2023 stand a chance to win a
             Big prize
           </p>
-          <Button children="Register" styleList="changeThis" />
+            <Button to="/Register" children="Register" styleList="changeThis" />
 
           <div className="countdown grid gap-4 sm:gap-6 mb-8 md:mb-auto grid-cols-3 w-fit lg:w-1/2 text-center items-center">
             <div className="time">
