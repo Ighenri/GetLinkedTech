@@ -70,11 +70,11 @@ export default function HeroPage() {
       </div>
 
       <div className="Hero grid grid-cols-1 mt-8 text-center md:text-left md:flex relative mix-blend-lighten">
-        <img
-          className="absolute md:w-[700px] z-0 -top-[20%] -left-[20%] md:-left-[25%] md:-top-[50%] lg:-top-[40%] lg:-left-[5%] opacity-50 mix-blend-lighten"
+        {/* <img
+          className="absolute h-80 h-auto md:w-[700px] z-0 -top-[20%] -left-[20%] md:-left-[25%] md:-top-[50%] lg:-top-[60%] lg:-left-[5%] opacity-50 mix-blend-lighten"
           src={purpleFlare}
           alt=""
-        />
+        /> */}
         <div className="countdownSection flex flex-col mt-10 items-center w-full md:w-1/2 md:block ">
           <p className=" block text-4xl lg:text-6xl font-extrabold relative mix-blend-lighten">
             getlinked Tech Hackathon{" "}
@@ -93,7 +93,9 @@ export default function HeroPage() {
             Participate in getlinked tech Hackathon 2023 stand a chance to win a
             Big prize
           </p>
+          <div>
             <Button to="/Register" children="Register" styleList="changeThis" />
+          </div>
 
           <div className="countdown grid gap-4 sm:gap-6 mb-8 md:mb-auto grid-cols-3 w-fit lg:w-1/2 text-center items-center">
             <div className="time">

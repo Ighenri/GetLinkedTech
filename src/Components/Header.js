@@ -77,7 +77,7 @@ export default function NarBar() {
             <NavLink to="/Contact">Contact</NavLink>
           </li>
         </ul>
-        <Button to="/Register" children="Register" />-
+        <Button to="/Register" children="Register" />
       </nav>
 
       <div className="md:invisible flex items-center justify-center z-20">

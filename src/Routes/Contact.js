@@ -47,7 +47,7 @@ export const Contact = () => {
           </div>
         </div>
 
-        <div className="w-[340px] md:w-[500px] ">
+        <div className="w-[300px] md:w-[500px] ">
           <form className=" p-2 w-[100%]">
             <p className=" text-light-purple text-lg md:text-2xl">
               Questions or need assistance?
@@ -79,7 +79,7 @@ export const Contact = () => {
                 name=""
                 id=""
                 cols="30"
-                rows="3"
+                rows="4"
                 placeholder="Message"
               ></textarea>
             </div>
